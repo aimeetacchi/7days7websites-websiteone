@@ -1,0 +1,29 @@
+/* =================
+* Base Styles
+* ==================== */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $white;
+  color: $grayishBlue;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $darkblue;
+  font-weight: 300;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
