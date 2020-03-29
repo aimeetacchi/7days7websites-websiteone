@@ -51,11 +51,16 @@ header nav {
   text-align: center;
 }
 header nav ul {
-  font-size: 12px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+  display: none;
+}
+@media (min-width: 1024px) {
+  header nav ul {
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
 }
 header nav ul li {
   margin: 0 5px;
@@ -80,11 +85,21 @@ header nav ul li .border {
 header nav ul li a:hover + .border {
   background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
 }
+header .btn {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header .btn {
+    display: block;
+  }
+}
 
-.row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+@media (min-width: 1024px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
 }
 
 .hero-outer-container {
@@ -220,26 +235,55 @@ button:focus {
   margin: 0 auto;
   padding: 40px 0;
 }
-.footer__inner .row {
-  grid-template-columns: 1fr 2fr 1fr;
+@media (min-width: 1024px) {
+  .footer__inner .row {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+.footer__inner .row .footer-col-1 {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .footer__inner .row .footer-col-1 {
+    text-align: left;
+  }
 }
 .footer__inner .row .footer-col-1 .social-icons {
   display: flex;
   padding-top: 50px;
+  justify-content: center;
 }
 .footer__inner .row .footer-col-1 .social-icons img {
   max-width: 20px;
   margin: 0 5px;
 }
+.footer__inner .row .footer-col-2 ul {
+  padding: 40px 0;
+}
+@media (min-width: 1024px) {
+  .footer__inner .row .footer-col-2 ul {
+    padding: 0;
+  }
+}
 .footer__inner .row .footer-col-2 li {
   font-size: 14px;
   padding: 10px 0 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .footer__inner .row .footer-col-2 li {
+    text-align: left;
+  }
 }
 .footer__inner .row .footer-col-3 {
-  justify-self: end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .footer__inner .row .footer-col-3 {
+    justify-self: end;
+  }
 }
 .footer__inner .row .footer-col-3 small {
   display: block;
@@ -258,6 +302,13 @@ button:focus {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .footer ul {
+    flex-direction: row;
+  }
 }
 .footer ul li {
   width: 50%;

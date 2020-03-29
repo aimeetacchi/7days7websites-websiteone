@@ -1,7 +1,10 @@
 .row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+
+  @media (min-width:$largeScreens) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
 }
 
 
