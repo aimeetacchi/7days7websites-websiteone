@@ -58,13 +58,17 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+
   .hero-img-one {
-    position: absolute;
-    top: -7%;
-    right: -9%;
-    z-index: 1;
-    min-width: 300px;
-    max-width: 750px;
+      display: none;
+    @media (min-width:$largeScreens) {
+      position: absolute;
+      top: -7%;
+      right: -9%;
+      z-index: 1;
+      min-width: 300px;
+      max-width: 750px;
+    }
   }
 }
 
@@ -142,25 +146,23 @@ main {
 
 
 // Buttons
-
-button {
-  color: $white;
-  border: 0;
+a.btn {
+  display: block;
+  font-size: 14px;
   width: 160px;
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .btn {
   @include borderRadius(60px); 
+  text-align: center;
   padding: 15px 30px;
   font-weight: 400;
   background: $limeGreen;
 background: linear-gradient(90deg, $limeGreen 0%, $brightCyan 100%);
+  position: relative;
+  z-index: 1;
 
-&:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 }

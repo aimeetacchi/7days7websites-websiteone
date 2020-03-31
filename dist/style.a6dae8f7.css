@@ -28,6 +28,13 @@ img {
   width: 100%;
 }
 
+a {
+  color: #ffffff;
+  border: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
 .top-container {
   position: relative;
   z-index: 2;
@@ -146,12 +153,17 @@ header .btn {
   height: 100%;
 }
 .hero-overlay .hero-img-one {
-  position: absolute;
-  top: -7%;
-  right: -9%;
-  z-index: 1;
-  min-width: 300px;
-  max-width: 750px;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .hero-overlay .hero-img-one {
+    position: absolute;
+    top: -7%;
+    right: -9%;
+    z-index: 1;
+    min-width: 300px;
+    max-width: 750px;
+  }
 }
 
 main {
@@ -207,21 +219,21 @@ main .finances__img {
   height: 200px;
 }
 
-button {
-  color: #ffffff;
-  border: 0;
+a.btn {
+  display: block;
+  font-size: 14px;
   width: 160px;
-}
-button:focus {
-  outline: none;
 }
 
 .btn {
   border-radius: 60px;
+  text-align: center;
   padding: 15px 30px;
   font-weight: 400;
   background: #31d35c;
   background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+  position: relative;
+  z-index: 1;
 }
 .btn:hover {
   opacity: 0.8;
@@ -283,6 +295,7 @@ button:focus {
 @media (min-width: 1024px) {
   .footer__inner .row .footer-col-3 {
     justify-self: end;
+    align-items: flex-end;
   }
 }
 .footer__inner .row .footer-col-3 small {
