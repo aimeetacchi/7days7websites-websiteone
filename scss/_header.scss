@@ -3,7 +3,7 @@
   z-index: 2;
   background-color: $white;
 }
-header {
+.header {
   max-width: 1225px;
   margin: auto;
   display: flex;
@@ -11,6 +11,13 @@ header {
   align-items: center;
   position: relative;
   z-index: 2;
+  padding: 20px 10px;
+
+  @media (min-width:$largeScreens) {
+    padding: 0;
+  }
+
+  
   
   .logo {
     max-width: 100px;
@@ -63,7 +70,37 @@ header {
       }
   }
 
-  .btn {
+  &__menu {
+    position: relative;
+    .burger {
+      position: absolute;
+      width:20px;
+      height: 15px;
+      top: 0;
+      right: 10px;
+      transition: opacity .3s;
+
+      @media (min-width:$largeScreens) {
+        display: none;
+      }
+    
+    }
+
+    .hide-burger {
+      display: none;
+    
+    }
+
+    .close-burger {
+      opacity: 0;
+      transition: opacity .3s;
+     
+    }
+
+
+  }
+
+  a.btn {
     display: none;
 
         @media (min-width:$largeScreens) {

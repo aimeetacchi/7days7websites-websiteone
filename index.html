@@ -16,7 +16,7 @@
 <body>
 
   <div class="top-container">
-    <header>
+    <header class="header">
   
         <img class="logo" src="./images/logo.svg" alt="logo">
         <nav>
@@ -30,7 +30,10 @@
         </nav>
    
         <a class="btn" href="#">Request Invite</a>
-     
+        <div class="header__menu"> 
+          <img class="burger" src="./images/icon-hamburger.svg" alt="burger menu">
+          <img src="./images/icon-close.svg" alt="close burger" class="close-burger">
+        </div>
     </header>
   </div>
   
@@ -48,7 +51,12 @@
           <a class="btn" href="#">Request Invite</a>
         </div>
       </div>
-      <img src="./images/bg-intro-desktop.svg" alt="hero background" class="hero-img">
+      
+      <picture>
+        <source media="(min-width: 480px)" srcset="./images/bg-intro-desktop.svg">
+        
+        <img src="./images/bg-intro-mobile.svg" alt="background-hero" class="hero-img">
+      </picture>
     </div>
     <div class="hero-overlay">
       <img class="hero-img-one" src="./images/image-mockups.png" alt="mobile phones">
