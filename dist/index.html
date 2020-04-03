@@ -16,7 +16,7 @@
     <header class="header">
   
         <img class="logo" src="/logo.236e4034.svg" alt="logo">
-        <nav>
+        <nav id="menu">
           <ul>
             <li><a href="#">Home</a><div class="border"></div></li>
             <li><a href="#">About</a><div class="border"></div></li>
@@ -27,9 +27,9 @@
         </nav>
    
         <a class="btn" href="#">Request Invite</a>
-        <div class="header__menu"> 
-          <img class="burger" src="/icon-hamburger.cb455b0f.svg" alt="burger menu">
-          <img src="/icon-close.1add023a.svg" alt="close burger" class="close-burger">
+        <div id="burgerMenu" class="header__menu"> 
+          <img id="burgerIcon" class="burger" src="/icon-hamburger.cb455b0f.svg" alt="burger menu">
+          <img id="closeMenu" src="/icon-close.1add023a.svg" alt="close burger" class="close-burger">
         </div>
     </header>
   </div>
@@ -208,6 +208,14 @@
       </div>
       
     </footer>
-
+    <script>var menu = document.getElementById('menu');
+var burgerIcon = document.getElementById('burgerIcon');
+var closeMenu = document.getElementById('closeMenu');
+var burgerMenu = document.getElementById('burgerMenu');
+burgerMenu.addEventListener('click', function () {
+  menu.classList.toggle('show-nav');
+  burgerIcon.classList.toggle('hide-burger');
+  closeMenu.classList.toggle('show-close-burger');
+});</script>
 </body>
 </html>
