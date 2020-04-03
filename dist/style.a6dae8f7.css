@@ -55,7 +55,7 @@ a {
 }
 @media (min-width: 1200px) {
   .header {
-    padding: 0;
+    padding: 0 20px;
   }
 }
 .header .logo {
@@ -217,6 +217,7 @@ a {
 @media (min-width: 1200px) {
   .hero-container {
     height: 80vh;
+    min-height: 650px;
   }
 }
 .hero-container__inner {
@@ -243,6 +244,7 @@ a {
   .hero-container__inner .hero {
     width: 75%;
     margin: 0;
+    padding: 0 20px;
   }
 }
 .hero-container__inner .hero__heading h1 {
@@ -271,6 +273,8 @@ a {
 @media (min-width: 1024px) {
   .hero-container .hero-img {
     transform: translate(40%, -5%) scale(1.2);
+    height: auto;
+    width: 75%;
   }
 }
 @media (min-width: 1200px) {
@@ -279,6 +283,7 @@ a {
     top: -30%;
     right: -40%;
     transform: translateY(0);
+    width: 100%;
   }
 }
 
@@ -434,6 +439,7 @@ a.btn {
 
 .footer {
   background-color: #2d314d;
+  padding: 0 20px;
 }
 .footer__inner {
   max-width: 1225px;
