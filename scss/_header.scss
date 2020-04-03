@@ -72,6 +72,11 @@
 
   &__menu {
     position: relative;
+    
+    @media (min-width:$largeScreens) {
+      display: none;
+    }
+
     .burger {
       position: absolute;
       width:20px;
@@ -80,9 +85,7 @@
       right: 10px;
       transition: opacity .3s;
 
-      @media (min-width:$largeScreens) {
-        display: none;
-      }
+      
     
     }
 
